@@ -1,0 +1,71 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Pacifico", cursive;
+}
+
+header {
+    background-color: #441D14;
+    box-shadow: 0px 3px 25px 0 #441D14;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 0; 
+}
+
+
+.logo {
+    height: 70px;
+    padding: 0;
+    margin: 5px;
+}
+
+.nav-bar {
+    display: flex;
+    margin-left: 190px; 
+    padding: 0;
+}
+
+.logo-image {
+    margin-top: 10%; 
+    margin-left: 250%;
+    height: 100%; 
+}
+
+.nav-link {
+    font-size: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(152, 158, 158, 0.7);
+    
+}
+
+.container {
+    display: right;
+    justify-content: right; 
+    align-items: right;
+    flex-grow: 1; 
+    padding: 0 2px;
+    margin-left: 50%;
+    position: right;
+    
+}
+
+input{
+    padding: 10px;
+    border: 5px;
+    width: 45%;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+    font-size: 16px;
+    margin-right: 0px;
+}
+
+
+.nombre {
+    color: #ffffff; 
+    -webkit-text-stroke: 0.8px rgb(133, 133, 133);
+}

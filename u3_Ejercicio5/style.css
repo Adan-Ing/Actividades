@@ -1,0 +1,156 @@
+/* Estilos Globales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', Arial, sans-serif;
+    background-color: #4B2A2A;
+    color: #fff;
+}
+
+/* Header */
+header {
+    background-color: #3B1919;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+header .logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.search-bar button {
+    background-color: #E2B094;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #E2B094;
+    font-weight: bold;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submenu li {
+    padding: 10px;
+}
+
+.submenu li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Hero */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4B2A2A;
+    padding: 50px;
+    color: #fff;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-text {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.hero-button {
+    background-color: #D71F27;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.hero-button:hover {
+    background-color: #ba1b23;
+}
+
+/* Productos */
+.products {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #5C3B3B;
+}
+
+.product {
+    margin: 0 20px;
+    text-align: center;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.product p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #E2B094;
+}

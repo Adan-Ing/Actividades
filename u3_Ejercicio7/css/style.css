@@ -1,0 +1,203 @@
+/* Variables Globales */
+:root {
+    /* Colores */
+    --primary-bg-color: #4B2A2A;
+    --secondary-bg-color: #3B1919;
+    --highlight-color: #E2B094;
+    --button-bg-color: #D71F27;
+    --button-hover-bg-color: #ba1b23;
+    --text-color: #fff;
+    --submenu-bg-color: #fff;
+    --submenu-hover-bg-color: #f0f0f0;
+    --product-bg-color: #5C3B3B;
+
+    /* Dimensiones */
+    --header-padding: 20px;
+    --hero-padding: 50px;
+    --search-bar-width: 300px;
+    --product-img-width: 200px;
+    --product-img-height: 200px;
+    --button-padding: 10px 20px;
+    --border-radius: 5px;
+
+    /* Espaciado */
+    --default-margin: 20px;
+    --default-padding: 10px;
+    --font-large: 3em;
+    --font-medium: 1.5em;
+    --font-small: 1.2em;
+}
+
+/* Estilos Globales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', Arial, sans-serif;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: "logo nav search";
+    background-color: var(--secondary-bg-color);
+    padding: var(--header-padding);
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+header .logo img {
+    width: 50px;
+    margin-right: var(--default-padding);
+}
+
+.search-bar {
+    grid-area: search;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-bar input {
+    padding: var(--default-padding);
+    border: none;
+    border-radius: var(--border-radius);
+    width: var(--search-bar-width);
+}
+
+.search-bar button {
+    background-color: var(--highlight-color);
+    border: none;
+    padding: var(--default-padding);
+    margin-left: var(--default-padding);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+/* Navegación */
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    padding: calc(var(--default-padding) * 2) var(--default-margin);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: var(--submenu-bg-color);
+    color: #000;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submenu li {
+    padding: var(--default-padding);
+}
+
+.submenu li:hover {
+    background-color: var(--submenu-hover-bg-color);
+}
+
+/* Hero */
+.hero-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background-color: var(--primary-bg-color);
+    padding: var(--hero-padding);
+    color: var(--text-color);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: var(--font-large);
+    margin: 0;
+}
+
+.hero-text {
+    font-size: var(--font-medium);
+    margin: var(--default-margin) 0;
+}
+
+.hero-button {
+    background-color: var(--button-bg-color);
+    border: none;
+    padding: var(--button-padding);
+    color: white;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: var(--font-small);
+}
+
+.hero-button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+.hero-img img {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+/* Productos */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--default-margin);
+    padding: var(--default-margin);
+    background-color: var(--product-bg-color);
+}
+
+.product {
+    text-align: center;
+}
+
+.product img {
+    width: var(--product-img-width);
+    height: var(--product-img-height);
+    border-radius: calc(var(--border-radius) * 2);
+}
+
+.product p {
+    margin-top: var(--default-margin);
+    font-size: 18px;
+    color: var(--highlight-color);
+}

@@ -25,7 +25,7 @@ Unidad III
 
 8.[Sitio responsivo](u3_Ejercicio8/index.html).
 
-[Examen].[Sitio Weba](Examen/index.html).
+[Examen].[Sitio Web](Examen/index.html).
 
 Unidad IV
 

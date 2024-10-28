@@ -42,6 +42,15 @@ button:hover {
     background-color: #218838;
 }
 
+button#eliminarCompletadasBtn {
+    background-color: #dc3545;
+    margin-top: 5px;
+}
+
+button#eliminarCompletadasBtn:hover {
+    background-color: #c82333;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -54,17 +63,26 @@ li {
     padding: 10px;
     border-radius: 5px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
-li.completed {
+li.completed span {
     text-decoration: line-through;
     color: #888;
 }
 
+li > span {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
 button.eliminar {
     background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
 }
 
 button.eliminar:hover {

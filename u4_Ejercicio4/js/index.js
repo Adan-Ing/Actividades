@@ -51,12 +51,10 @@ function crearElementoTarea(texto, completada) {
     eliminarBtn.textContent = "Eliminar";
     eliminarBtn.classList.add("eliminar");
     eliminarBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        if (confirm("¿Seguro que deseas eliminar esta tarea?")) {
-            li.remove();
+        e.stopPropagation(); 
+        li.remove();
             guardarTareas();
             actualizarPendientes();
-        }
     });
 
     li.appendChild(checkbox);

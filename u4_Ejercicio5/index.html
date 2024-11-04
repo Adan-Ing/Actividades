@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Gato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="tarjeta">
+        <div class="foto">
+            <img id="catImage" src="" alt="" class="imagen">
+        </div>
+
+        <div class="texto">
+            <h1 id="catName"></h1>
+            <p><strong>Temperamento:</strong> <span id="temperament"></span></p>
+            <p><strong>Años de vida:</strong> <span id="lifeSpan"></span></p>
+            <p><strong>Descripción:</strong> <span id="description"></span></p>
+            <p><strong>Amigable con niños:</strong> <span id="friendly-child"></span></p>
+            <p><strong>Amigable con perros:</strong> <span id="dog-Friendly"></span></p>
+            <p><strong>Origen:</strong> <span id="origin"></span></p>
+            <p><strong>Enlace a Wikipedia:</strong> <a id="wiki" href="#" target="_blank">Más información</a></p>
+        </div>
+    </main>
+
+    <script>
+        const apiUrl = "https://api.thecatapi.com/v1/breeds";
+        async function gato() {
+            try {
+                const response = await fetch(apiUrl, {
+                    headers: {
+                        'x-api-key' : 'live_THpkayjwSS7MDEeQHwSiOKxkZefMs6vBb10GHBkrGC5iidt7erU53g7nEwbZtdC9'
+                    }
+                });
+
+                if (!response.ok) {
+                    const errorMessage = await response.text();
+                    throw new Error('Error: ' + errorMessage);
+                }
+
+                const breeds = await response.json();
+                const randomCat = breeds[25];
+                console.log(randomCat);
+                displayBreedDetails(randomCat);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        function displayBreedDetails(breed) {
+            document.getElementById("catImage").src = breed.image?.url || '';
+            document.getElementById("catName").textContent = breed.name;
+            document.getElementById("temperament").textContent = breed.temperament;
+            document.getElementById("lifeSpan").textContent = breed.life_span;
+            document.getElementById("description").textContent = breed.description;
+            document.getElementById("friendly-child").textContent = breed.child_friendly;
+            document.getElementById("dog-Friendly").textContent = breed.dog_friendly;
+            document.getElementById("origin").textContent = breed.origin;
+            document.getElementById("wiki").href = breed.wikipedia_url;
+        }
+
+        gato();
+    </script>
+</body>
+</html>

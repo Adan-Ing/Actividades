@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles de la Raza de Gato</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Tarjeta de Gato</title>
+    <link rel="stylesheet" href="style1.css">
 </head>
-
 <body>
-    <div class="cat-details" id="catDetails">
-        <img id="catImage" src="" alt="">
-        <div>
+    <main class="tarjeta">
+        <div class="foto">
+            <img id="catImage" src="" alt="" class="imagen">
+        </div>
+
+        <div class="texto">
             <h1 id="catName"></h1>
             <p><strong>Temperamento:</strong> <span id="catTemperament"></span></p>
             <p><strong>Años de vida:</strong> <span id="catLifeSpan"></span></p>
@@ -21,7 +22,8 @@
             <p><strong>Origen:</strong> <span id="origin"></span></p>
             <p><strong>Enlace a Wikipedia:</strong> <a id="wikiLink" href="#" target="_blank">Más información</a></p>
         </div>
-    </div>
+    </main>
+
 
     <script type="module" src="js/details.js"></script>
 </body>
